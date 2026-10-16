@@ -199,18 +199,7 @@ while (<CAT>) {
 	# We need logic for comma here . . .
 }
 print FILE "\n}\n\n\n";
-#var services = {
-        #"01 Demo (Ken)": {
-                #"CloudTrail": "d7c25cd46de04b41afd0412266b560da",
-                #"CloudWatch": "704feb51158e47359ebf872a3ad43aee",
-                #"GuardDuty": "7d481e115c294f9cbf77c2796137607d",
-                #"New Relic": "f56a6e39342c42f4bf3dc05015f3123a",
-                #"PHD": "f377979711fa41b593f57284fb6ebce4"
-        #},
-        #"02 Demo (Eric)": {
-                #"CloudTrail": "55e8ab68e5f046849c5a5729431a6d77",
-                #"CloudWatch": "61b6d2a5944b453292291dcc34d180e1",
-#
+
 close FILE;
 print "Created services.js file.\n";
 # Get the demo titles hash
