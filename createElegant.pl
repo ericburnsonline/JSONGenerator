@@ -121,6 +121,13 @@ foreach my $filename(@files) {
 print "Processed $count JSON files in JSON directory.\n";
 
 # create payloads.js file
+# Verify all referenced payload files before overwriting output.
+foreach my $payloadFile (@payloads) {
+    my $filename = "JSON/$payloadFile.json";
+
+    die "Missing or unreadable payload file: $filename\n"
+        unless -f $filename && -r $filename;
+}
 open (FILE, ">payloads.js") || die "Can't write to payloads.js - $!\n";
 $count = 0;
 foreach my $payloadFile(@payloads) {
